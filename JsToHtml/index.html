@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js to Html</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            background-color: #333;
+            color: #eee;
+        }
+
+        .container-importante {
+            padding: 10px 15px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Testando o getElementById</h2>
+    <span id="nome-usuario"></span>
+
+    <h2>Testando o getElementByClass</h2>
+    <span class="turma-usuario"></span>
+    <span class="turma-usuario" style="color: orange"></span>
+
+    <h2>Testando a querySelector</h2>
+    <span class="modulo">1</span>
+    <span class="modulo">
+        <p>2</p>
+    </span>
+    <div class="container-importante">
+        <span>
+            <p>PS: Ele pega o primeiro valor de uma lista de valores</p>
+        </span>
+        <span>
+            <p>Funciona para .Class e #Id</p>
+        </span>
+    </div>
+
+    <h2>Verificação se um id/class existe</h2>
+    <span id="teste-validacao"></span>
+    <h2></h2>
+
+
+    <hr>
+    <!--Trabalhando com formulários-->
+    <h2>Formulários</h2>
+    <form>
+        <label for="form_nome">Nome</label>
+        <input type="text" name="form_nome" value="Vinicius">
+        <small>Formulário com valor fixo</small>
+    </form>
+    <p>Valor do formulário: <span id="valor_nome"></span></p>
+    <br>
+    <form>
+        <label for="form_turma">Turma</label>
+        <input type="text" name="form_turma" id="form_turma" onkeyup="receberTurma()">
+        <small>Formulário com valor dinâmico</small>
+    </form>
+    <p>Valor do formulário: <span id="valor_turma"></span></p>
+    <script src="custom.js"></script>
+</body>
+
+</html>
